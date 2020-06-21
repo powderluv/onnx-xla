@@ -36,4 +36,4 @@ onnxStatus translateGlobalAveragePool(const Node& n,
   return ONNXIFI_STATUS_SUCCESS;
 }
 REGISTER_OPERATOR_TRANSLATOR(GlobalAveragePool, translateGlobalAveragePool)
-}
+}  // namespace onnx_xla

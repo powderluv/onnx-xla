@@ -1,28 +1,27 @@
 #pragma once
 
 #include "onnx/onnx.pb.h"
-#include "onnx/proto_utils.h"
 #include "onnx/onnxifi.h"
 #include "onnx/proto_utils.h"
 #include "onnx/shape_inference/implementation.h"
 
-#include "tensorflow/compiler/xla/rpc/computation_client.h"
+#include <grpcpp/grpcpp.h>
 #include "tensorflow/compiler/xla/client/client.h"
+#include "tensorflow/compiler/xla/rpc/computation_client.h"
 #include "tensorflow/compiler/xla/rpc/grpc_stub.h"
 #include "tensorflow/compiler/xla/rpc/xla_service.grpc.pb.h"
-#include <grpcpp/grpcpp.h>
 
-#include "onnx_xla/utils.h"
 #include "onnx_xla/operator_registry.h"
+#include "onnx_xla/utils.h"
 
 #include <memory>
 
 namespace onnx_xla {
-using ::xla::GlobalData;
-using ::xla::XlaComputation;
+using ::ONNX_NAMESPACE::Graph;
 using ::ONNX_NAMESPACE::ModelProto;
 using ::ONNX_NAMESPACE::Tensor;
-using ::ONNX_NAMESPACE::Graph;
+using ::xla::GlobalData;
+using ::xla::XlaComputation;
 
 class XlaTransform;
 class XlaExecutor;
@@ -176,4 +175,4 @@ class OnnxParser {
   const void* serialized_model_;
   size_t serialized_model_size_;
 };
-}
+}  // namespace onnx_xla

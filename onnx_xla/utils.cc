@@ -97,4 +97,4 @@ std::vector<int64> getMultidirectionalBroadcastArg(const XlaBuilder& builder,
   }
   return broadcastDims;
 }
-}
+}  // namespace onnx_xla

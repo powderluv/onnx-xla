@@ -23,6 +23,13 @@ TODO:
 
 Steps to test:
 
+0.01 Install bazel 0.11 
+0.02 Checkout grpc referenced in third_party/tensorflow/tensorflow/workspace.bzl .
+0.1 Reset the protobuf version in grpc to be same as workspace.bzl above.  
+0.2 Build cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/local -DBUILD_SHARED_LIBS=ON && make install. 
+0.3 Copy over the .so files since it doesn't install them. 
+0.4 Install of the python module will fail. Manually mkdir build/lib.linux-x86_64-3.6 and re-run
+
 1. Run "python setup.py install" or "python setup.py develop"
 
 2. Start an XLA server with "./third_party/tensorflow/bazel-bin/tensorflow/compiler/xla/rpc/grpc_service_main_cpu --port=51000

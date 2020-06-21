@@ -1,5 +1,5 @@
-#include "onnx_xla/operator_registry.h"
 #include "onnx_xla/conv_pool_helper.h"
+#include "onnx_xla/operator_registry.h"
 
 namespace onnx_xla {
 // Translates Max Pool (no indices support yet)
@@ -38,4 +38,4 @@ onnxStatus translateMaxPool(const Node& n,
   return ONNXIFI_STATUS_SUCCESS;
 }
 REGISTER_OPERATOR_TRANSLATOR(MaxPool, translateMaxPool)
-}
+}  // namespace onnx_xla

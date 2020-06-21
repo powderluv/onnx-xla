@@ -35,4 +35,4 @@ TranslationMap& OperatorRegistry::map() {
   static TranslationMap map;
   return map;
 }
-}
+}  // namespace onnx_xla

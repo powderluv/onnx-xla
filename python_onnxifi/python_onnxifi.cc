@@ -1,14 +1,14 @@
-#include <pybind11/pybind11.h>
+#include <google/protobuf/message_lite.h>
 #include <pybind11/numpy.h>
+#include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
 #include <string.h>
-#include <google/protobuf/message_lite.h>
-#include <unordered_map>
-#include <utility>
 #include <cstdio>
 #include <memory>
-#include "onnx/onnxifi.h"
+#include <unordered_map>
+#include <utility>
 #include "onnx/onnx.pb.h"
+#include "onnx/onnxifi.h"
 #include "onnx/proto_utils.h"
 #include "python_onnxifi/data_conversion.h"
 

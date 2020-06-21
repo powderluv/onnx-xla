@@ -129,4 +129,4 @@ const std::vector<std::pair<int64, int64>>& ConvPoolHelper::getInputPadding()
     const {
   return inputPadding;
 }
-}
+}  // namespace onnx_xla

@@ -29,4 +29,4 @@ onnxStatus translateTranspose(const Node& n,
   return ONNXIFI_STATUS_SUCCESS;
 }
 REGISTER_OPERATOR_TRANSLATOR(Transpose, translateTranspose)
-}
+}  // namespace onnx_xla

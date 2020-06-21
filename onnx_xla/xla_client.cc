@@ -1,8 +1,8 @@
 #include "onnx_xla/xla_client.h"
+#include <vector>
 #include "onnx/onnx.pb.h"
 #include "onnx/proto_utils.h"
 #include "tensorflow/compiler/xla/client/xla_client/xla_builder.h"
-#include <vector>
 
 namespace onnx_xla {
 
@@ -61,4 +61,4 @@ std::string XlaClient::TryRun() {
   }
   return ONNX_NAMESPACE::ProtoDebugString(result);
 }
-}
+}  // namespace onnx_xla

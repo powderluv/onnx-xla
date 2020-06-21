@@ -38,4 +38,4 @@ struct ConvPoolHelper {
   std::vector<int64> windowDilations;
   std::vector<std::pair<int64, int64>> inputPadding;
 };
-}
+}  // namespace onnx_xla

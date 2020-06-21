@@ -1,7 +1,7 @@
-#include "onnx_xla/onnxifi_helper.h"
 #include "onnx_xla/backend_test.h"
 #include <stdlib.h>
 #include <cmath>
+#include "onnx_xla/onnxifi_helper.h"
 
 namespace onnx_xla {
 
@@ -174,4 +174,4 @@ void dynamic_relu_test() {
   delete inputEvent;
   delete outputEvent;
 }
-}
+}  // namespace onnx_xla

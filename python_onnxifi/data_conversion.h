@@ -1,15 +1,15 @@
 #pragma once
 
-#include <pybind11/pybind11.h>
 #include <pybind11/numpy.h>
+#include <pybind11/pybind11.h>
 #include <pybind11/pytypes.h>
 
-#include "onnx/onnxifi.h"
 #include "onnx/onnx.pb.h"
+#include "onnx/onnxifi.h"
 #include "onnx/shape_inference/implementation.h"
 
-#include <vector>
 #include <unordered_map>
+#include <vector>
 
 namespace py = pybind11;
 

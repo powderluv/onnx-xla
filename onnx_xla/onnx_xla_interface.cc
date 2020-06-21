@@ -1,9 +1,9 @@
-#include "onnx/onnxifi.h"
-#include "onnx_xla/onnxifi_helper.h"
-#include <thread>
-#include <mutex>
 #include <condition_variable>
 #include <functional>
+#include <mutex>
+#include <thread>
+#include "onnx/onnxifi.h"
+#include "onnx_xla/onnxifi_helper.h"
 
 // TODO: Figure out how to determine type of device, what information to store
 //      about hardware, and how to modify execution as a result

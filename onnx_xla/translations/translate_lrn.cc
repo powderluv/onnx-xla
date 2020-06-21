@@ -63,4 +63,4 @@ onnxStatus translateLRN(const Node& n,
   return ONNXIFI_STATUS_SUCCESS;
 }
 REGISTER_OPERATOR_TRANSLATOR(LRN, translateLRN)
-}
+}  // namespace onnx_xla

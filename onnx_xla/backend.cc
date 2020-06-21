@@ -361,4 +361,4 @@ onnxStatus OnnxParser::parse(std::unique_ptr<Graph>& ir) {
   }
 }
 #undef SWITCH
-}
+}  // namespace onnx_xla

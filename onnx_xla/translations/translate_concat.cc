@@ -21,4 +21,4 @@ onnxStatus translateConcat(const Node& n,
   return ONNXIFI_STATUS_SUCCESS;
 }
 REGISTER_OPERATOR_TRANSLATOR(Concat, translateConcat)
-}
+}  // namespace onnx_xla

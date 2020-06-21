@@ -3,36 +3,36 @@
 #include "onnx/common/ir.h"
 #include "onnx/common/ir_pb_converter.h"
 #include "onnx/onnxifi.h"
+#include "tensorflow/compiler/tf2xla/lib/util.h"
 #include "tensorflow/compiler/xla/client/xla_client/xla_builder.h"
 #include "tensorflow/compiler/xla/rpc/computation_client.h"
-#include "tensorflow/compiler/tf2xla/lib/util.h"
 
 #include "onnx_xla/utils.h"
 
-#include <functional>
-#include <utility>
 #include <algorithm>
 #include <cmath>
+#include <functional>
 #include <numeric>
+#include <utility>
 
 namespace onnx_xla {
 
 using ::xla::Literal;
-using ::xla::ShapeUtil;
-using ::xla::Shape;
-using ::xla::primitive_util::NativeToPrimitiveType;
-using ::xla::XlaOp;
-using ::xla::XlaBuilder;
-using ::xla::XlaComputation;
 using ::xla::LiteralBase;
-using ::xla::StatusOr;
 using ::xla::Padding;
 using ::xla::PrimitiveType;
+using ::xla::Shape;
+using ::xla::ShapeUtil;
+using ::xla::StatusOr;
+using ::xla::XlaBuilder;
+using ::xla::XlaComputation;
+using ::xla::XlaOp;
+using ::xla::primitive_util::NativeToPrimitiveType;
 
-using ::ONNX_NAMESPACE::Value;
 using ::ONNX_NAMESPACE::Dimension;
-using ::ONNX_NAMESPACE::Symbol;
 using ::ONNX_NAMESPACE::Node;
+using ::ONNX_NAMESPACE::Symbol;
+using ::ONNX_NAMESPACE::Value;
 
 using ValueLiteralMap =
     std::unordered_map<const Value*, std::unique_ptr<Literal>>;
@@ -76,4 +76,4 @@ class OperatorRegistry final {
 #define REGISTER_OPERATOR_TRANSLATOR(name, translator)                        \
   static OperatorRegistry::OperatorRegisterOnce register##name(Symbol(#name), \
                                                                translator);
-}
+}  // namespace onnx_xla

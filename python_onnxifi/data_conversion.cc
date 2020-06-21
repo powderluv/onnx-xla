@@ -1,10 +1,10 @@
 #include "python_onnxifi/data_conversion.h"
 
-#include <utility>
-#include <unordered_set>
 #include <algorithm>
 #include <complex>
 #include <functional>
+#include <unordered_set>
+#include <utility>
 namespace py = pybind11;
 
 #define DISPATCH_OVER_NUMERIC_DATA_TYPE(data_type, op_template, ...)        \
@@ -227,8 +227,8 @@ void DataConversion::fillDescriptorDataVector(
     } /*else if (dtype.is(py::dtype::of<half>())) {
     TODO: fillDescriptorDataImpl<int32_t, half>(dd, numpyArray,
     //         ONNX_NAMESPACE::TensorProto_DataType_FLOAT16);
-  }*/ else if (
-        dtype.is(py::dtype::of<float>())) {
+  }*/
+    else if (dtype.is(py::dtype::of<float>())) {
       fillDescriptorDataImpl<float, float>(
           dd, numpyArray, ONNX_NAMESPACE::TensorProto_DataType_FLOAT);
     } else if (dtype.is(py::dtype::of<double>())) {

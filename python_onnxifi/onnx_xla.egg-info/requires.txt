@@ -1,0 +1,6 @@
+numpy
+onnx
+protobuf
+six
+typing-extensions>=3.6.2.1
+typing>=3.6.4

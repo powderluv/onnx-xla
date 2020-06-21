@@ -16,4 +16,4 @@ onnxStatus translateDropout(const Node& n,
   return ONNXIFI_STATUS_SUCCESS;
 }
 REGISTER_OPERATOR_TRANSLATOR(Dropout, translateDropout)
-}
+}  // namespace onnx_xla

@@ -6,6 +6,7 @@ project(onnx-xla C CXX)
 
 # Set C++11 as standard for the whole project
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
 
@@ -42,10 +43,17 @@ add_custom_command(
 add_custom_target(xla
   SOURCES ${XLA_LIBRARIES})
 
+SET(GRPC_INSTALL_DIR "$ENV{HOME}/local")
 # TODO: Get this from grpc CMake files
+#include_directories(
+#	"${GRPC_INSTALL_DIR}/include")
 SET(GRPC_LIBRARIES
-  "/usr/local/lib/libgrpc.so"
-  "/usr/local/lib/libgrpc++.so")
+  "${GRPC_INSTALL_DIR}/lib/libgrpc.so"
+  "${GRPC_INSTALL_DIR}/lib/libgrpc++.so"
+  "${GRPC_INSTALL_DIR}/lib/libgpr.so"
+  )
+  #"${GRPC_INSTALL_DIR}/lib/libgrpc_cronet.a"
+  #"${GRPC_INSTALL_DIR}/lib/libgrpc++_cronet.a"
 
 # onnx_xla library (whole archive when anything links to it)
  file(GLOB_RECURSE onnx_xla_src

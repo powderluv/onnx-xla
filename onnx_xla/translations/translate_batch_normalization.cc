@@ -34,4 +34,4 @@ onnxStatus translateBatchNormalization(const Node& n,
   return ONNXIFI_STATUS_SUCCESS;
 }
 REGISTER_OPERATOR_TRANSLATOR(BatchNormalization, translateBatchNormalization)
-}
+}  // namespace onnx_xla

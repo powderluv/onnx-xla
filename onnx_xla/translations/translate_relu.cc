@@ -14,4 +14,4 @@ onnxStatus translateRelu(const Node& n,
   return ONNXIFI_STATUS_SUCCESS;
 }
 REGISTER_OPERATOR_TRANSLATOR(Relu, translateRelu)
-}
+}  // namespace onnx_xla

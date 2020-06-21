@@ -9,4 +9,4 @@ onnxStatus translateUndefined(const Node& n,
   return ONNXIFI_STATUS_SUCCESS;
 }
 REGISTER_OPERATOR_TRANSLATOR(Undefined, translateUndefined)
-}
+}  // namespace onnx_xla

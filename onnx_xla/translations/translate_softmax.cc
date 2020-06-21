@@ -56,4 +56,4 @@ onnxStatus translateSoftmax(const Node& n,
   return ONNXIFI_STATUS_SUCCESS;
 }
 REGISTER_OPERATOR_TRANSLATOR(Softmax, translateSoftmax)
-}
+}  // namespace onnx_xla

@@ -81,4 +81,4 @@ onnxStatus translateGemm(const Node& n,
   return ONNXIFI_STATUS_SUCCESS;
 }
 REGISTER_OPERATOR_TRANSLATOR(Gemm, translateGemm)
-}
+}  // namespace onnx_xla

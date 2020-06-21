@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <cmath>
+#include <random>
 #include <sys/stat.h> 
 #include <fcntl.h>
 #include <google/protobuf/io/coded_stream.h>

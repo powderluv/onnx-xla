@@ -73,4 +73,4 @@ onnxStatus translateReshape(const Node& n,
   return ONNXIFI_STATUS_SUCCESS;
 }
 REGISTER_OPERATOR_TRANSLATOR(Reshape, translateReshape)
-}
+}  // namespace onnx_xla
